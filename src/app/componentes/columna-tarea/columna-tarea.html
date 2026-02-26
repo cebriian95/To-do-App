@@ -1,0 +1,13 @@
+<div class="columna-tarea flex flex-col p-2 rounded shadow h-125" [ngClass]="clasesFondo">
+
+    <!-- Título de la columna -->
+    <h1 class="text-lg font-bold mb-4 text-black">{{titulo}}</h1>
+
+    <!-- Lista de tareas -->
+    <div class="m-4 overflow-y-auto flex-1">
+        @for (tarea of tareasFiltradas; track tarea.id) {
+        <app-tarea [tarea]="tarea"></app-tarea>
+        }
+    </div>
+
+</div>

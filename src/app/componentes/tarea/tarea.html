@@ -1,0 +1,25 @@
+<div class="bg-yellow-200 border-2 border-black mb-4 p-2 
+            shadow-[2px_3px_0px_0px_rgba(0,0,0,1)]
+            hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]
+            transition-all">
+
+  <div class="flex justify-between items-center">
+    
+    <span class="font-bold text-black">
+      {{tarea.titulo}}
+    </span>
+
+    <div class="flex gap-2">
+      <button (click)="eliminarTarea()" class="bg-red-500 text-white px-3 py-1 border-2 border-black font-bold hover:bg-red-600 transition-colors">
+        X <!-- Botón para eliminar la tarea -->
+      </button>
+
+      @if (tarea.estado !== 2) {
+        <button (click)="actualizarEstado()" class="bg-green-500 text-white px-3 py-1 border-2 border-black font-bold hover:bg-green-400 transition-colors">
+        -> <!-- Botón para mover la tarea a la siguiente columna -->
+      </button>
+      }
+    </div>
+
+  </div>
+</div>
